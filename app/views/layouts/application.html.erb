@@ -11,9 +11,7 @@
   </head>
 
   <body>
-    <% if notice %>
-      <%= notice %>
-    <% end %>
+    <%= render 'layouts/messages' %>
     <%= yield %>
   </body>
 </html>
