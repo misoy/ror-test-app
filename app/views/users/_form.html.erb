@@ -7,8 +7,8 @@
     </div>
 
     <div class="form-group row mx-0">
-      <%= f.label :description, for: "email", class: "col-3 0 text-white" %><br/>
-      <%= f.email_field :description, class: "form-control col-9 shadow rounded", id:"email", placeholder: "Enter your email address"  %>
+      <%= f.label :email, for: "email", class: "col-3 0 text-white" %><br/>
+      <%= f.email_field :email, class: "form-control col-9 shadow rounded", id:"email", placeholder: "Enter your email address"  %>
     </div>
 
     <div class="form-group row mx-0">
@@ -17,7 +17,7 @@
     </div>
 
     <div class="form-group row justify-content-center my-4">
-      <%= f.submit class: "btn btn-outline-light"%>
+      <%= f.submit "Sign up",  class: "btn btn-outline-light"%>
     </div>
   <% end %>
 </div>
