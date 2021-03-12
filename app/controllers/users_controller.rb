@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, only: [:edit, :update]
+  before_action :require_same_user, only: [:edit, :update]
 
   def index
     @users = User.paginate(page: params[:page], per_page: 5)
@@ -49,4 +51,12 @@ class UsersController < ApplicationController
   def set_notice_msg(msg)
     flash[:notice] = "User was #{ msg } successfuly."
   end
+
+  def require_same_user
+    if current_user != @user
+      flash[:alert] = "You can only edit or delete your own account"
+      redirect_to @user
+    end
+  end
+
 end
