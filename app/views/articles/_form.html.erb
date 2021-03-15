@@ -6,9 +6,16 @@
       <%= f.text_field :title, class: "form-control col-9 shadow rounded", id:"title", placeholder: "Enter title of article" %>
     </div>
 
-    <div class="form-group row m-0">
+    <div class="form-group row mx-0">
       <%= f.label :description, for: "description", class: "col-3 0 text-white" %><br/>
       <%= f.text_area :description, rows: 10, class: "form-control col-9 shadow rounded", id:"description", placeholder: "Enter description of article"  %>
+    </div>
+
+    <div class="form-group row mx-0">
+      <%= f.label :category, for: "description", class: "col-3 0 text-white" %><br/>
+      <%= f.collection_select(:category_ids, Category.order(:name), :id, :name, 
+      { :prompt => "Make your selection from the list below (can be empty)" }, 
+      { :multiple => true, size: Category.all.count + 1, class: "custom-select col-9 shadow rounded" }) %>
     </div>
 
     <div class="form-group row justify-content-center my-4">
