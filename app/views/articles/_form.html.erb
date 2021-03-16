@@ -1,6 +1,6 @@
 <div class="container col-10">
   <%= render 'shared/errors', obj: @article %>
-  <%= form_with(model: @article, class: "shadow p-3 mb-3 bg-info rounded", local: true) do |f| %>
+  <%= form_with(model: @article, class: "shadow p-3 mb-3 bg-info rounded form-article", local: true) do |f| %>
     <div class="form-group row align-items-center mx-0">
       <%= f.label :title, for: "title", class: "col-3 m-0 text-white" %><br/>
       <%= f.text_field :title, class: "form-control col-9 shadow rounded", id:"title", placeholder: "Enter title of article" %>
