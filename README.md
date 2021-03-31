@@ -1,6 +1,6 @@
 # Alpha Blog
 
-This is a Blog Web App. This is developed on Ruby 3.0.0. 
+This is a Blog Web App. This is developed on Rails 6.1.3. 
 Features and functionality:
 * Authors can sign in and register.
 * Authors can write article and associate it with a category (one or many).
